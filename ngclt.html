@@ -1,0 +1,50 @@
+<form id="NCD_Prospective_Hospital">
+  <h2>Patient Demographics & Risk Factors</h2>
+  <label>Patient ID: <input type="text" name="patient_id" required></label><br>
+  <label>Age (years): <input type="number" name="age" min="18" max="99" required></label>
+  <label>Gender:
+    <select name="gender"><option value="M">Male</option><option value="F">Female</option></select>
+  </label><br>
+  <label>Smoker (currently): <input type="radio" name="smoking_current" value="yes">Yes <input type="radio" name="smoking_current" value="no">No</label><br>
+  <!-- Adapted core STEPS T1‑T core variables... -->
+
+  <h2>Physical & Biochemical Measurements</h2>
+  <label>Height (cm): <input type="number" name="height_cm" step="0.1"></label>
+  <label>Weight (kg): <input type="number" name="weight_kg" step="0.1"></label>
+  <label>Systolic BP (mmHg): <input type="number" name="bp_sys"></label>
+  <label>Diastolic BP (mmHg): <input type="number" name="bp_dia"></label><br>
+  <label>Fasting blood glucose (mg/dL): <input type="number" name="glucose"></label>
+  <label>Total cholesterol (mg/dL): <input type="number" name="cholesterol"></label>
+
+  <h2>Admission & Clinical Course</h2>
+  <label>Admission Date: <input type="date" name="admission_date" required></label>
+  <label>Ward/Unit: <input type="text" name="ward"></label><br>
+  <label>Primary NCD Diagnosis: <input type="text" name="primary_diagnosis"></label><br>
+  <label>Comorbidities (check all that apply):<br>
+    <input type="checkbox" name="dm" value="yes"> Diabetes Mellitus<br>
+    <input type="checkbox" name="htn" value="yes"> Hypertension<br>
+    <input type="checkbox" name="cvd" value="yes"> Cardiovascular Disease
+  </label>
+
+  <h2>Follow‑Up & Outcome</h2>
+  <label>Discharge Date: <input type="date" name="discharge_date"></label>
+  <label>Outcome:
+    <select name="outcome">
+      <option value="discharged">Discharged</option>
+      <option value="died">Death</option>
+      <option value="transferred">Transferred</option>
+    </select>
+  </label><br>
+  <label>Length of Stay (days): <input type="number" name="length_of_stay"></label>
+  <label>Complications during stay:<textarea name="complications" rows="3"></textarea></label>
+
+  <h2>Facility Readiness (optional module)</h2>
+  <p>Adapted from WHO‑PEN assessment: equipment, medicines, trained staff, guidelines available</p>
+  <label>Blood pressure machine functional:
+    <select name="bp_machine"><option value="yes">Yes</option><option value="no">No</option></select>
+  </label><br>
+  <label>Insulin available:
+    <select name="insulin"><option value="yes">Yes</option><option value="no">No</option></select>
+  </label><br>
+  <button type="submit">Submit Survey</button>
+</form>
